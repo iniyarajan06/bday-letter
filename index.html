@@ -4,43 +4,39 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Happy Birthday Priya</title>
+
+    <!-- Google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&family=Great+Vibes&display=swap"
       rel="stylesheet"
     />
+
     <link rel="stylesheet" href="style.css" />
   </head>
+
   <body>
-    <!-- Intro overlay shown on first load -->
+    <!-- Intro overlay -->
     <section id="introOverlay" class="intro-overlay">
       <div class="intro-content">
         <p class="intro-title">Hey Priya 💛</p>
         <p class="intro-text">I made something for you…</p>
         <p class="intro-text">Not a big gift,</p>
         <p class="intro-text">but something from my heart.</p>
-        <p class="intro-text intro-bottom">Click below to open it 🎁</p>
+        <p class="intro-text intro-bottom">
+          Click below to open it 🎁
+        </p>
 
         <button id="openLetterBtn" class="open-btn" type="button">
-          <span class="gift-icon" aria-hidden="true">
-            <span class="gift-lid"></span>
-            <span class="gift-box"></span>
-            <span class="gift-ribbon-v"></span>
-            <span class="gift-ribbon-h"></span>
-            <span class="gift-bow"></span>
-          </span>
           <span class="btn-label">Open</span>
         </button>
       </div>
     </section>
 
-    <!-- Decorative floating hearts background -->
-    <div class="hearts" aria-hidden="true">
-      <span class="heart"></span>
-      <span class="heart"></span>
-      <span class="heart"></span>
-      <span class="heart"></span>
+    <!-- floating hearts -->
+    <div class="hearts">
       <span class="heart"></span>
       <span class="heart"></span>
       <span class="heart"></span>
@@ -52,36 +48,47 @@
     </div>
 
     <main class="page-wrap">
-      <!-- Birthday card with smooth opening animation -->
-      <article id="birthdayCard" class="card" aria-live="polite">
+
+      <!-- Birthday Card -->
+      <article id="birthdayCard" class="card">
+
         <header class="card-header">
-          <h1 class="glow-title">Happy Birthday Priya 💛</h1>
-          <p class="subtitle">A little letter from Iniya</p>
+          <h1 class="glow-title">
+            Happy Birthday Priya 💛
+          </h1>
+
+          <p class="subtitle">
+            A little letter from Iniya
+          </p>
         </header>
 
-        <!-- Small framed square photo shown after card opens -->
-        <div class="photo-frame" aria-label="Birthday memory photo">
-          <img src="ia/image.png" alt="Birthday memory" class="memory-photo" />
+        <!-- FIXED IMAGE PATH -->
+        <div class="photo-frame">
+          <img
+            src="image.png"
+            alt="Birthday memory"
+            class="memory-photo"
+          />
         </div>
 
+        <!-- Letter text -->
         <section class="letter-body">
-          <!-- Typing animation output goes here -->
           <pre id="typedLetter" class="typed-letter"></pre>
         </section>
+
       </article>
+
     </main>
 
-    <!-- Background birthday music (local file first, fallback stream second) -->
+    <!-- Music -->
     <audio id="birthdayMusic" preload="auto" loop>
       <source src="music.mp3" type="audio/mpeg" />
-      <source
-        src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_c8c8a73467.mp3?filename=birthday-128379.mp3"
-        type="audio/mpeg"
-      />
     </audio>
 
-    <!-- Confetti library -->
+    <!-- Confetti -->
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+
     <script src="script.js"></script>
+
   </body>
 </html>
